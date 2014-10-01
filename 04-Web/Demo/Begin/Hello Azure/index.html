@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <center><h1>Say 'Hello' to Azure Websites</h1></center>
+		<a href="hello.asp"><h2>Say 'Hello' in Classic ASP</h2></a>
+		<pre>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>%</span>@ Language<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>VBScript</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>%</span><span style='color:#808030; '>></span>
+
+<span style='color:#808030; '>&lt;</span>html<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>head<span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span>title<span style='color:#808030; '>></span>Hello World<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>title<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>head<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>body<span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>%</span> Response<span style='color:#808030; '>.</span>Write<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>&lt;h1>Hello World (in Classic ASP!)&lt;/h1></span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>%</span><span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>body<span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>html<span style='color:#808030; '>></span>
+</pre>
+
+
+		<a href="hello.aspx"><h2>Say 'Hello' in ASP.NET WebForms</h2></a>
+				<pre>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>%</span>@ Page Language<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>C#</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>%</span><span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>%</span> HelloWorldLabel<span style='color:#808030; '>.</span>Text <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>&lt;h1>Hello World (in ASP.NET Web Forms!)&lt;/h1></span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span> <span style='color:#808030; '>%</span><span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span>html<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>head runat<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>server</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span>title<span style='color:#808030; '>></span>Hello World<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>title<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>head<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>body<span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span>form id<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>form1</span><span style='color:#800000; '>"</span> runat<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>server</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+            <span style='color:#808030; '>&lt;</span>asp<span style='color:#800080; '>:</span>Label runat<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>server</span><span style='color:#800000; '>"</span> id<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>HelloWorldLabel</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>asp<span style='color:#800080; '>:</span>Label<span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>form<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>body<span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>html<span style='color:#808030; '>></span>
+</pre>
+		
+		<a href="hello.cshtml"><h2>Say 'Hello' in Razor</h2></a>
+				<pre>
+<span style='color:#808030; '>&lt;</span>html<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>head<span style='color:#808030; '>></span>
+        <span style='color:#808030; '>&lt;</span>title<span style='color:#808030; '>></span>Hello World<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>title<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>head<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span>body<span style='color:#808030; '>></span>
+        @<span style='color:#800080; '>{</span> <span style='color:#800000; font-weight:bold; '>var</span> myMessage <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Hello World (in Razor!)</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span> 
+        <span style='color:#808030; '>&lt;</span>h1<span style='color:#808030; '>></span>@myMessage<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>h1<span style='color:#808030; '>></span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>body<span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>html<span style='color:#808030; '>></span>
+</pre>
+		
+		<a href="hello.js"><h2>Say 'Hello' in Node</h2></a>
+		<pre>
+<span style='color:#800000; font-weight:bold; '>var</span> http <span style='color:#808030; '>=</span> require<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'http'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+http<span style='color:#808030; '>.</span>createServer<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>function</span> <span style='color:#808030; '>(</span>req<span style='color:#808030; '>,</span> res<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+    
+    res<span style='color:#808030; '>.</span>writeHead<span style='color:#808030; '>(</span><span style='color:#008c00; '>200</span><span style='color:#808030; '>,</span> <span style='color:#800080; '>{</span> <span style='color:#0000e6; '>'Content-Type'</span><span style='color:#800080; '>:</span> <span style='color:#0000e6; '>'text/html'</span> <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    res<span style='color:#808030; '>.</span>end<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'&lt;h1>Hello World (in Node.js!)&lt;/h1>'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    
+<span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>listen<span style='color:#808030; '>(</span>process<span style='color:#808030; '>.</span>env<span style='color:#808030; '>.</span>PORT<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+		
+		<a href="hello.php"><h2>Say 'Hello' in PHP</h2></a>
+				<pre>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>html</span><span style='color:#a65700; '>></span>
+    <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>head</span><span style='color:#a65700; '>></span>
+        <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>title</span><span style='color:#a65700; '>></span>Hello World<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>title</span><span style='color:#a65700; '>></span>
+    <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>head</span><span style='color:#a65700; '>></span>
+    <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#a65700; '>></span>
+        <span style='color:#5f5035; background:#ffffe8; '>&lt;?php</span><span style='color:#000000; background:#ffffe8; '></span>
+<span style='color:#000000; background:#ffffe8; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span><span style='color:#800000; background:#ffffe8; font-weight:bold; '>echo</span><span style='color:#808030; background:#ffffe8; '>(</span><span style='color:#0000e6; background:#ffffe8; '>"&lt;h1>Hello World (in PHP!)&lt;/h1>"</span><span style='color:#808030; background:#ffffe8; '>)</span><span style='color:#800080; background:#ffffe8; '>;</span><span style='color:#000000; background:#ffffe8; '></span>
+<span style='color:#000000; background:#ffffe8; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span><span style='color:#5f5035; background:#ffffe8; '>?></span>
+    <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>html</span><span style='color:#a65700; '>></span>
+</pre>
+		
+		<a href="hello.py"><h2>Say 'Hello' in Python</h2></a>
+		<pre>
+def application<span style='color:#808030; '>(</span>environ<span style='color:#808030; '>,</span> start_response<span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+    status <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'200 OK'</span>
+    response_headers <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#0000e6; '>'Content-type'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'text/html'</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span>
+    start_response<span style='color:#808030; '>(</span>status<span style='color:#808030; '>,</span> response_headers<span style='color:#808030; '>)</span>
+    yield <span style='color:#0000e6; '>'&lt;h1>Hello World (in Python!)&lt;/h1></span><span style='color:#0f69ff; '>\n</span><span style='color:#0000e6; '>'</span>
+</pre>
+
+    </body>
+</html>
