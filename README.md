@@ -13,7 +13,7 @@ The content for the 2014 Microsoft 2014 Cloud DevCamps can be found here. The sl
 
 There are also video recordings of the sessions available here:
 
-
+Links Coming Soon
 
 
 
