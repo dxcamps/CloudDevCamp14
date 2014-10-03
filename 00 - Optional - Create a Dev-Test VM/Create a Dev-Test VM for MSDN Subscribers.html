@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="CreateDevTestVmMSDN"></a></p>
+
+<h1 id="Create_a_DevTest_VM_in_Azure_for_MSDN_Subscribers">Create a Dev/Test VM in Azure for MSDN Subscribers</h1>
+
+<hr>
+
+<p><a name="Overview"></a></p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>In this demo, we'll show you how MSDN subscribers can create a Dev/Test VM using Gallery Images that include <strong>Windows 8.1 Enterprise and Visual Studio 2013</strong> already installed. This demo is specifically for people with MSDN subscriptions.  The Windows 8.1 client images, and Visual Studio 2013 images are not available to non-MSDN subscribers. </p>
+
+<p>While it is called a &quot;demo&quot;, it is really a step-by-step hands on lab that presenters and event attendees alike can follow to create a development environment in Azure.  </p>
+
+<p><a id="goals"></a></p>
+
+<h3 id="Goals">Goals</h3>
+
+<p>In this demo, you will see how to:</p>
+
+<ol>
+<li>Create a Windows Virtual Machine in Azure</li>
+<li>Configure the operating system security</li>
+<li>Install additional software and tools as needed</li>
+</ol>
+
+<p><a name="technologies"></a></p>
+
+<h3 id="Key_Technologies">Key Technologies</h3>
+
+<ul>
+<li><a href="http://azure.microsoft.com/en-us/documentation/services/virtual-machines/">Azure Virtual Machines</a></li>
+<li><a href="http://azure.microsoft.com/blog/2014/05/29/windows-client-images-on-azure/">Azure Virtual Machine Windows Client Images for MSDN Subscribers</a></li>
+<li><a href="http://visualstudio2013msdngalleryimage.azurewebsites.net/">Visual Studio 2013 Gallery Image for MSDN Subscribers</a></li>
+</ul>
+
+<p><a name="Setup"></a></p>
+
+<h3 id="Setup_and_Configuration">Setup and Configuration</h3>
+
+<p>In order to execute this demo you need to do a little prep.</p>
+
+<ol>
+<li><strong><em>IMPORTANT - Follow all of the steps in this demo to create a VM ahead of time.  This will allow you to continue show how subsequent steps are done without having to wait for the provisioning times, reboot times, etc.</em></strong><br></li>
+<li><strong><em>Startup the VM to make sure it is running and that you can connect to it via RDP, BEFORE you start the demo</em></strong></li>
+<li>As you do the demo live, show them how to create the VM, but rather than waiting for it to be provisioned, switch to the VM you created ahead of time.<br></li>
+</ol>
+
+<p><a name="Demo"></a></p>
+
+<h2 id="Demo">Demo</h2>
+
+<p>This demo is composed of the following segments:</p>
+
+<ol>
+<li><a href="#CreateVM">Create an Azure Virtual Machine using an MSDN Gallery Image</a></li>
+<li><a href="#Security">Configure Security to allow for Windows 8.1 App Development</a></li>
+<li><a href="#Software">Install Additional Software as Needed</a></li>
+<li><a href="#CleanUp">Shutting Down or Deleting Your VM</a></li>
+</ol>
+
+<hr>
+
+<p><a name="CreateVM"></a></p>
+
+<h3 id="Create_an_Azure_Virtual_Machine_using_an_MSDN_Gallery_Image">Create an Azure Virtual Machine using an MSDN Gallery Image</h3>
+
+<ol>
+<li><p>Login to the <a href="https://manage.windowsazure.com">Azure Managment Portal</a> (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>) using the appropriate Microsoft Account, and switch to the <strong>&quot;VIRTUAL MACHINES&quot;</strong> page, then along the bottom, click <strong>&quot;+NEW&quot;</strong> | <strong>&quot;COMPUTE&quot;</strong> | <strong>&quot;VIRTUAL MACHINE&quot;</strong> | <strong>&quot;FROM GALLERY&quot;</strong>:</p>
+<blockquote>
+<p><strong>Note:</strong> The Microsoft Account you connect as must have access to an Azure Account associated with an MSDN benefit.  Otherwise, the MSDN gallery images will not be available. If you have more than one subscription associated with the same Microsoft Account, use the Subscriptions filter along the top of the portal window to choose the appropriate MSDN subscription.</p>
+</blockquote>
+<p><img src="images/01010-fromgallery.png?raw=true" alt="01010-FromGallery" title="From Gallery">
+</p></li>
+<li><p>On the <strong>&quot;Chose an Image&quot;</strong>, enable the <strong>&quot;MSDN&quot;</strong> checkbox, and select the <strong>&quot;Visual Studio Ultimate 2013 Update 2 on Windows 8.1 Enterprise (x64)&quot;</strong> (or an appropriate later version), and click the <strong>&quot;Next&quot;</strong> (<strong>Right Arrow</strong>) button to continue:</p>
+
+<p><img src="images/01020-win81image.png?raw=true" alt="01020-Win81Image" title="Windows 8.1 Image with VS Ultimate">
+</p></li>
+<li><p>On the <strong>&quot;Virtual machine configuration&quot;</strong> page, enter the following, then click the <strong>Next</strong> (<strong>Right Arrow</strong>) button to continue:</p>
+
+<ul>
+<li><strong>VIRTUAL MACHINE NAME</strong>: Enter a valid windows server computer name</li>
+<li><strong>TIER</strong>: Choose <strong>STANDARD</strong>.  You can actually choose <strong>BASIC</strong> if you prefer, and the VM will cost slightly less to execute, but you can't do load balancing or virtual networks with BASIC VMs.  I prefer to choose <strong>STANDARD</strong> for demo VMs I will be deleting soon anyhow so I can show all features if asked. </li>
+<li><strong>SIZE</strong>: Choose <strong>A2</strong>. You can go larger if you have available cores and credits.  I don't recommend going smaller for demo though because the VM performancw will suffer, and the demo will run slower.  Use your best judgement, but remember that you can change this in the future if needed.<br></li>
+<li><strong>NEW USER NAME</strong>: Enter a valid windows user name.  <strong><em>This will be the name of the built-in administrator account.</em></strong></li>
+<li><strong>NEW PASSWORD</strong> / <strong>CONFIRM</strong>: Enter a complex password for the built-in administrator account. </li>
+</ul>
+
+<p><img src="images/01030-configurevm01.png?raw=true" alt="01030-ConfigureVM01" title="Configure Virtual Machine">
+</p></li>
+<li><p>On the next <strong>&quot;Virtual Machine Configuration&quot;</strong> page, enter the following, then click the <strong>Next</strong> (<strong>Right Arrow</strong>) button to continue:</p>
+
+<ul>
+<li><strong>CLOUD SERVICE</strong>: Choose <strong>Create a new cloud service</strong></li>
+<li><strong>CLOUD SERVICE DNS NAME</strong>:  Accept the default cloud service host name if it is valid.  If it isn't, edit it until you get a valid, unique, hostname (indicated by the green circle and checkmark).  This is the fully qualified DNS host name you will use to access all VM endpoints exposed on this cloud service.<br></li>
+<li><strong>REGION / AFFINITY GROUP / VIRTUAL NETWORK</strong>: Choose the data region closest to you to host your VM.</li>
+<li><strong>STORAGE ACCOUNT</strong>:  Choose <strong>&quot;Use an automatically generated storage account&quot;</strong> to let the wizard provision an account for you. </li>
+<li><strong>AVAILABILITY SET</strong>&quot;: Choose <strong>(None)</strong></li>
+<li><strong>ENDPOINTS</strong>:  Leave the default <strong>Remote Desktop</strong> and <strong>PowerShell</strong> endpoints.  Note that the **Remote Desktop&quot;&quot; endpoint uses a dynamic (AUTO) public port that will be assigned at creating time.  This allows you to run multiple VMs in the cloud service, each with their own custom RDP endpoint.<br></li>
+</ul>
+
+<p><img src="images/01040-configurevm02.png?raw=true" alt="01040-ConfigureVM02" title="Configure Virtual Machine">
+</p></li>
+<li><p>On the final <strong>&quot;Virtual maching configuration&quot;</strong> page, leave the defaults (ensure that <strong>&quot;Install the VM Agent&quot;</strong> is checked), and click the <strong>&quot;Finish&quot;</strong> (<strong>Checkmark</strong>) button to complete the wizard.</p>
+
+<p><img src="images/01050-configurevm03.png?raw=true" alt="01050-ConfigureVM03" title="Configure Virtual Machine">
+</p>
+<blockquote>
+<p><strong>Note:</strong> The VM Agent allows a few things.  Allows various extensions to be installed in your VM.  These include the VMAccess extension, that can be used to reset your password if needed, the BGInfo extension which configures the BGInfo utility to show useful information on your VM wallpaper, as well as the Puppet Enterprise Agent, and the Chef agent which allow the VM to be managed by a Puppet or Chef server.  We won't mess with Puppet or Chef in this demo.</p>
+</blockquote></li>
+<li><p>Back in the portal, on the <strong>VIRTUAL MACHINES</strong> page, you should now see your new VM being provisioned.  It will take 5-10 minutes for the VM to be ready to connect to via RDP. <strong><em>If you have a previously created VM ready to go, this is a good time to swtich over to it to demonstrate the remaining steps so you don't have to wait for the VM provisioning to complete.  Its ok if all subsequent steps have been completed on the second VM.  You can still how how the steps are completed, even if they are already done.</em></strong></p>
+
+<p><img src="images/01060-vmprovisioning.png?raw=true" alt="01060-VMProvisioning" title="VM Provisioning">
+</p></li>
+<li><p>Once the VM is running, you can select it by clicking on its status, not it's name.  Clicking on it's name opens it's dashboard.  Which is fine if you want to show it, we just aren't going to walk through the dashboard here.  Once you have it selected, you can click on the <strong>&quot;CONNECT&quot;</strong> button along the bottom of the portal.  </p>
+
+<p><img src="images/01070-connect.png?raw=true" alt="01070-Connect" title="Connect">
+</p></li>
+<li><p>The portal will inform you that a .RDP file will be downloaded.  Click <strong>OK</strong> to acknowlegde.</p>
+
+<p><img src="images/01080-portalprompt.png?raw=true" alt="01080-PortalPrompt" title="Portal Prompt">
+</p></li>
+<li><p>Your browser should prompt you to save the file.  Save it to your <strong>&quot;Downloads&quot;</strong> folder:</p>
+
+<p><img src="images/01090-saverdpfiletodownloads.png?raw=true" alt="01090-SaveRDPFileToDownloads" title="Save RDP File to Downloads">
+</p></li>
+<li><p>Open the folder where the .RDP File was downloaded:</p>
+
+<p><img src="images/01100-opendownloadsfolder.png?raw=true" alt="01100-OpenDownloadsFolder" title="Open Downloads Folder">
+</p></li>
+<li><p>Then double click on the .RDP file to open it. </p>
+<blockquote>
+<p><strong>Note:</strong> Of course you could have just opened it rather than saving it, but by saving it, you can open it and edit it.  This may be necessary if you need to manage which devices get connected, the screen resolution, as well as other settings.  Later we'll talk about editing the file as a way to enable Microsoft Accounts to login to the remote VM.  So, for that reason we are saving it here now.  </p>
+</blockquote>
+<p><img src="images/01110-openrdpfile.png?raw=true" alt="01110-OpenRDPFile" title="Open RDP File">
+</p></li>
+<li><p>If prompted to confirm the publisher of the .RDP file, optionally enable the <strong>&quot;Don't ask me again for connections to this computer&quot;</strong> checkbox if you don't want to receive this prompt in the future.  Then click <strong>&quot;Connect&quot;</strong> to confirm. </p>
+
+<p><img src="images/01120-confirm.png?raw=true" alt="01120-Confirm" title="Confirm">
+</p></li>
+<li><p>In the <strong>&quot;Windows Security&quot;</strong> dialog, first select <strong>&quot;Use another account&quot;</strong>:</p>
+
+<p><img src="images/01130-useanotheraccount.png?raw=true" alt="01130-UseAnotherAccount" title="User Another Account">
+</p></li>
+<li><p>Then, in the credential prompt enter:</p>
+
+<ul>
+<li><strong>User Name</strong>: Enter the built-in administrator user name you specified when creating the VM.  You must enter it in the <strong>&lt;VM Name&gt;&#92;&lt;User Name&gt;</strong> format.</li>
+<li><strong>Password</strong>: The complex password you specified for the built-in administrator account when creating the VM earlier.</li>
+</ul>
+
+<p><img src="images/01140-admincredentials.png?raw=true" alt="01140-AdminCredentials" title="Admin Credentials">
+</p></li>
+<li><p>If you receive a prompt stating that <strong>&quot;The identity of the remote computer annot be verified...&quot;</strong>, optionally enable the <strong>&quot;Don't ask me again...&quot;</strong> checkbox if you don't want to receive prompts in the future, then click <strong>&quot;Yes&quot;</strong> to continue:</p>
+
+<p><img src="images/01150-yes.png?raw=true" alt="01150-Yes" title="Yes">
+</p></li>
+<li><p>When the connection completes, you should see the remote desktop:</p>
+
+<p><img src="images/01160-remotedesktop.png?raw=true" alt="01160-RemoteDesktop" title="Remote Desktop">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Security"></a></p>
+
+<h3 id="Configure_Security_to_allow_for_Windows_81_App_Development">Configure Security to allow for Windows 8.1 App Development</h3>
+
+<p>If you hope to do Windows App development with this VM (unfortunately, you can't currently do Windows Phone App development in an Azure VM), you will need to login as a separate account, that is not the built-in administrator.  This is because the built-in administrator has policy restrictions set on it that prevent it from deploying store apps.  If you tried yourself, when you tried to debug a Windows Store app in Visual Studio, you would receive an error like this:</p>
+
+<p><img src="images/02010-windowapperror.png?raw=true" alt="02010-WindowAppError" title="Windows App Activation Error">
+</p>
+
+<p>So, what kind of account should you use?  Well, you have two choices:</p>
+
+<ul>
+<li>A traditional &quot;Local&quot; account: Easiest, but least funcationality</li>
+<li>A Microsoft Account: Requires a few more steps, but has all the benefits of a Microsoft Account</li>
+</ul>
+
+<p>If you choose to use a Microsoft Account, you again have a decision to make:</p>
+
+<p><img src="images/02020-microsoftaccountoptions.png?raw=true" alt="02020-MicrosoftAccountOptions" title="Microsoft Account Options">
+ </p>
+
+<ul>
+<li>Create a &quot;Local&quot; account first, then associate it with a &quot;Microsoft Account&quot;: Messy from an &quot;account&quot; perspective, but all-in-all is probably the easiest.</li>
+<li>Add a &quot;Microsoft Account&quot; Directly. Cleaner from an &quot;account&quot; perspective but requires chaning remote desktop, and RDP file settings to work. </li>
+</ul>
+
+<p>For this demo, we will use the first option of creating a Local account, then associating it with a Microsoft Account. This doesn't require changing any Remote Desktop or RDP file settings, and as such is the easiest way to work with an Azure VM, since the RDP file would need to be edited each time it was downloaded. If you want to learn about the second option of adding a Microsoft Account directly, and modifying the Remote Desktop and RDP file settings, go to <a href="http://azure.microsoft.com/blog/2014/05/29/windows-client-images-on-azure/"><strong>Windows Client images for MSDN subscribers</strong></a> and read the instructions under the <strong>&quot;How do I use a Microsoft account to remote desktop into the VMs?&quot;</strong> heading.</p>
+
+<ol>
+<li><p>In the <strong>Remote Desktop Connection</strong> window for the VM, ensure that you are logged in as the built-in administrator account you specified when creating them VM. Access the system <strong>&quot;Charms&quot;</strong> bar by moving your mouse to the lower right-corner of the remote desktop, or by using the Remote Desktop Connection window's system menu:</p>
+
+<p><img src="images/02030-remotecommands.png?raw=true" alt="02030-RemoteCommands" title="Remote Commands">
+</p>
+
+<p>Or</p>
+
+<p><img src="images/02035-remotecommands.png?raw=true" alt="02035-RemoteCommands" title="Remote Commands">
+</p></li>
+<li><p>Then, click on the <strong>&quot;Settings&quot;</strong> charm:</p>
+
+<p><img src="images/02040-settingscharm.png?raw=true" alt="02040-SettingsCharm" title="Settings Charm">
+</p></li>
+<li><p>Then click on <strong>&quot;Change PC settings&quot;</strong></p>
+
+<p><img src="images/02050-changepcsettings.png?raw=true" alt="02050-ChangePCSettings" title="Change PC Settings">
+</p></li>
+<li><p>Then click on <strong>&quot;Accounts&quot;</strong></p>
+
+<p><img src="images/02060-accounts.png?raw=true" alt="02060-Accounts" title="Accounts">
+</p></li>
+<li><p>On the <strong>&quot;Acounts&quot;</strong> Page, click <strong>&quot;Other Accounts&quot;</strong> then **&quot;Add an account&quot;</p>
+
+<p><img src="images/02070-addaccount.png?raw=true" alt="02070-AddAccount" title="Add an Account">
+</p></li>
+<li><p>On the <strong>&quot;How will this person sign in?&quot;</strong> page, click the *&quot;&quot;Sign in without a Microsoft account (not recommended)&quot;** link along the bottom.  Don't worry about that <strong>&quot;not recommended&quot;</strong> part.  We'll associate it with our Microsoft Account in just a bit. </p>
+
+<p><img src="images/02070-howsignin.png?raw=true" alt="02070-HowSignIn" title="How will this person sign in">
+</p></li>
+<li><p>On the <strong>&quot;Add a user&quot;</strong> page, click the <strong>&quot;Local account&quot;</strong> button</p>
+
+<p><img src="images/02080-addauser.png?raw=true" alt="02080-AddAUser" title="Add a User">
+</p></li>
+<li><p>On the next <strong>&quot;Add a user&quot;</strong> page, enter the credentials for the new user and click <strong>&quot;Next&quot;</strong></p>
+
+<p><img src="images/02090-newusercredentials.png?raw=true" alt="02090-NewUserCredentials" title="New User Credentials">
+</p></li>
+<li><p>On the final <strong>&quot;Add a user&quot;</strong> page, click <strong>&quot;Finish&quot;</strong></p>
+
+<p><img src="images/02100-finish.png?raw=true" alt="02100-Finish" title="Finish">
+</p></li>
+<li><p>Back on the <strong>&quot;Manage other accounts&quot;</strong> page, click the new user, then click <strong>&quot;Edit&quot;</strong> to modify it:</p>
+
+<p><img src="images/02110-edituser.png?raw=true" alt="02110-EditUser" title="Edit User">
+</p></li>
+<li><p>In the <strong>Edit account, change the user type to **&quot;Administrator&quot;</strong> (You don't have to do this, but it makes sure that your dev user will have all the permissions it needs in the VM).  Then click <strong>&quot;OK&quot;</strong></p>
+
+<p><img src="images/02120-makeadministrator.png?raw=true" alt="02120-MakeAdministrator" title="Make Administrator">
+</p></li>
+<li><p>Return to the <strong>Start Screen</strong> in the remote VM (you can use the <strong>Remote Desktop Connection</strong> window commands as described previously).  The click on the built-in administrators user name, and select <strong>&quot;Sign out&quot;</strong> to log out, and disconnect from the VM. The <strong>Remote Desktop Connection</strong> window will close. </p>
+
+<p><img src="images/02130-signout.png?raw=true" alt="02130-SignOut" title="Sign Out">
+</p></li>
+<li><p>Back on your machine, re-connect to the VM either by opening the saved <strong>.RDP</strong> file or by selecting the VM in the portal, and choosing <strong>&quot;CONNECT&quot;</strong> again.  </p>
+
+<p><img src="images/01110-openrdpfile.png?raw=true" alt="01110-OpenRDPFile" title="Open RDP File">
+</p>
+
+<p>Or</p>
+
+<p><img src="images/01070-connect.png?raw=true" alt="01070-Connect" title="Connect">
+</p></li>
+<li><p>Again, follow the prompts, but this time login using the credentials of the Local user you just created (Make sure to use the <strong>&lt;VM Name&gt;&#92;&lt;User Name&gt;</strong> format for the user name.</p>
+
+<p><img src="images/02140-connectasnewuser.png?raw=true" alt="02140-ConnectAsNewUser" title="Connect as new Local User">
+</p></li>
+<li><p>Using the steps described above, return to the *&quot;&quot;Accounts&quot;** page in **
+PC Settings&quot;<strong>.  Then from the **&quot;Your account&quot;</strong> page, click <strong>&quot;Connect to a Microsoft account&quot;</strong></p>
+
+<p><img src="images/02150-connectmicrosoftaccount.png?raw=true" alt="02150-ConnectMicrosoftAccount" title="Connect Microsoft Account">
+</p></li>
+<li><p>Confirm the password of the currently logged in local user, and click <strong>Next</strong>:</p>
+
+<p><img src="images/02160-confirmpassword.png?raw=true" alt="02160-ConfirmPassword" title="Confirm Password">
+</p></li>
+<li><p>Then, enter the credentials for the Microsoft Account you wish to use:</p>
+
+<p><img src="images/02180-microsoftaccountcredentials.png?raw=true" alt="02180-MicrosoftAccountCredentials" title="Microsoft Account Credentials">
+</p></li>
+<li><p>On the <strong>&quot;Help us protect your info&quot;</strong> page, follow the prompts to verify your identity:</p>
+
+<p><img src="images/02190-protection01.png?raw=true" alt="02190-Protection01" title="Protection">
+</p>
+
+<p><img src="images/02195-protection02.png?raw=true" alt="02195-Protection02" title="Protection">
+</p></li>
+<li><p>Click <strong>&quot;Next&quot;</strong> on the <strong>OneDrive</strong> page</p>
+
+<p><img src="images/02200-onedrive.png?raw=true" alt="02200-OneDrive" title="OneDrive">
+</p></li>
+<li><p>Finally, click <strong>&quot;Switch&quot;</strong> to confirm the switch:</p>
+
+<p><img src="images/02210-switch.png?raw=true" alt="02210-Switch" title="Switch">
+</p></li>
+<li><p>Sign out of the Remote Desktop Connection as described before, and re-connect one more time, this time using your Microsoft Account credentials for the connection:</p>
+
+<p><img src="images/02220-connectwithmicrosoftaccount.png?raw=true" alt="02220-ConnectWithMicrosoftAccount" title="Connect With Microsoft Account">
+</p></li>
+<li><p>You should now be connected with your Microsoft Account, with local Administrator privileges!</p>
+
+<p><img src="images/02230-connected.png?raw=true" alt="02230-Connected" title="Connected">
+</p></li>
+<li><p>Next, let's open Visual Studio and get signed in.  On the desktop of the VM, click the <strong>&quot;Visual Studio 2013&quot;</strong>  icon, and when prompted, click <strong>&quot;Sign In&quot;</strong> </p>
+
+<p><img src="images/02240-signintovs.png?raw=true" alt="02240-SignInToVS" title="Sign In to Visual Studio">
+</p></li>
+<li><p>Enter the credentials for the Microsoft Account associated with your MSDN subscription, and click <strong>&quot;Sign in&quot;</strong></p>
+
+<p><img src="images/02250-signin.png?raw=true" alt="02250-SignIn" title="Sign In">
+</p></li>
+<li><p>If any other prompts appear, answer them to the best of your ability</p></li>
+<li><p>When complete you should be signed into Visual Studio with your Microsoft Account</p>
+
+<p><img src="images/02260-verify.png?raw=true" alt="02260-Verify" title="Verify">
+</p></li>
+<li><p>You can close Visual Studio when you are done.</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Software"></a></p>
+
+<h3 id="Install_Additional_Software_as_Needed">Install Additional Software as Needed</h3>
+
+<p>The VM image we used already has <strong>&quot;Visual Studio Ultimate 2013 Update 2&quot;</strong> installed, but we often need additional tools.  If you plan on using this VM for the subsequent demos in this series, you will also want to ensure that you have </p>
+
+<ul>
+<li><strong>&quot;Azure SDK 2.3&quot;</strong> or later</li>
+<li><strong>&quot;Applicaiton Insights Tools for Visual Studio&quot;</strong> </li>
+<li>Any Updates to Visual Studio </li>
+<li>Optionally SQL Server 2014 Express or Developer Editions</li>
+<li>etc.</li>
+</ul>
+
+<p>In this demo we'll walk through the first few installations.</p>
+
+<h4 id="Install_the_Azure_SDK_23">Install the Azure SDK 2.3</h4>
+
+<ol>
+<li><p>Open a Remote Desktop Connection to your VM, and login as the Microsoft Account we provisioned previously.  <strong><em>All subsequent steps are to be performed within the Remote Desktop Connection window unless otherwise specified.</em></strong></p></li>
+<li><p>Open <strong>Internet Explorer</strong> and navigate to <strong>&quot;<a href="http://azure.microsoft.com">http://azure.microsoft.com</a>&quot;</strong> (If prompted, select to <strong>&quot;Use Recommended Settings&quot;</strong> in IE).  From the <strong>&quot;Downloads&quot;</strong> page, click the <strong>&quot;VS 2013 Install&quot;</strong></p>
+
+<p><img src="images/03010-azuresdkdownload.png?raw=true" alt="03010-AzureSDKDownload" title="Azure SDK Download">
+</p></li>
+<li><p>When prompted, click <strong>&quot;Run&quot;</strong> to run the installer after it is downloaded:</p>
+
+<p><img src="images/03020-run.png?raw=true" alt="03020-Run" title="Run">
+</p></li>
+<li><p>In the <strong>&quot;User Account Control&quot;</strong> window, click <strong>&quot;Yes&quot;</strong></p>
+
+<p><img src="images/03030-yes.png?raw=true" alt="03030-Yes" title="Yes">
+</p></li>
+<li><p>Follow the prompts to install the <strong>&quot;Azure SDK 2.3&quot;</strong> </p>
+
+<p><img src="images/03040-sdkinstall01.png?raw=true" alt="03040-SdkInstall01" title="SDK Install">
+</p>
+
+<p><img src="images/03042-sdkinstall02.png?raw=true" alt="03042-SDKInstall02" title="SDK Install">
+</p>
+
+<p><img src="images/03044-sdkinstall03.png?raw=true" alt="03044-SDKInstall03" title="SDK Install">
+</p>
+
+<p><img src="images/03046-sdkinstall04.png?raw=true" alt="03046-SDKInstall04" title="SDK Install">
+</p></li>
+<li><p>You may optionally want to install the <strong>&quot;Windows Azure Cross-Platform Command Line Tools&quot;</strong> and the <strong>&quot;Windows Azure PowerShell&quot;</strong> items as well.  When done.  Click <strong>&quot;Exit&quot;</strong></p>
+
+<p><img src="images/03050-exitwebpi.png?raw=true" alt="03050-ExitWebPI" title="Web the Web Platform Installer">
+</p></li>
+</ol>
+
+<h4 id="Install_Application_Insights_Tools_for_Visual_Studio">Install &quot;Application Insights Tools for Visual Studio&quot;</h4>
+
+<ol>
+<li><p>Open Visual Studio 2013, and from the menu bar, select <strong>&quot;Tools&quot;</strong> | <strong>&quot;Extensions and Updates...&quot;</strong></p>
+
+<p><img src="images/03060-extensions.png?raw=true" alt="03060-Extensions" title="Extensions">
+</p></li>
+<li><p>In the <strong>&quot;Extensions and Updates&quot;</strong> window, select <strong>&quot;Online&quot;</strong> on the left hand side, then in the search box in the top right corner, enter <strong>&quot;Application Insights&quot;</strong>.  From the search results list, select <strong>&quot;Application Insights Tools for Visual Studio&quot;</strong> and click <strong>&quot;Download&quot;</strong>:</p>
+
+<p><img src="images/03070-installappinsights.png?raw=true" alt="03070-InstallAppInsights" title="Install App Insights">
+</p></li>
+<li><p>In the <strong>&quot;Download and Install&quot;</strong> window, click <strong>&quot;Install&quot;</strong></p>
+
+<p><img src="images/03080-install.png?raw=true" alt="03080-Install" title="Install">
+</p></li>
+<li><p>When the installation is complete, click the <strong>&quot;Restart Now&quot;</strong> button to restart Visual Studio:</p>
+
+<p><img src="images/03090-restartnow.png?raw=true" alt="03090-RestartNow" title="Restart Now">
+</p></li>
+</ol>
+
+<h4 id="Install_Additional_Visual_Studio_Updates">Install Additional Visual Studio Updates</h4>
+
+<ol>
+<li><p>Back in Visual Studio, again from the menu bar, select <strong>&quot;TOOLS&quot;</strong> | <strong>&quot;Extensions and Updates&quot;</strong></p></li>
+<li><p>In the <strong>&quot;Extensions and Updates&quot;</strong> window, select <strong>&quot;Updates&quot;</strong> along the left, and proceed to install the various <strong>&quot;Product Updates&quot;</strong> and <strong>&quot;Visual Studio Gallery&quot;</strong> updates.</p>
+
+<p><img src="images/03100-updates.png?raw=true" alt="03100-Updates" title="Updates">
+</p></li>
+<li><p>Follow the prompts for each.  Some may require you to close Visul Studio to continue, or restart Visual Studio when the installation is complete.  Continue to return to <strong>&quot;Extensions and Updates&quot;</strong> to install the next update until they have all been installed.  However, you may want to <strong>SKIP</strong> then <strong>&quot;Windows Phone 8.1 Emulators&quot;</strong> because you can't run the emulator in an Azure VM and it would just be a waste of time and storage. </p></li>
+</ol>
+
+<hr>
+
+<p><a name="CleanUp"></a></p>
+
+<h3 id="Shutting_Down_or_Deleting_Your_VM">Shutting Down or Deleting Your VM</h3>
+
+<p>At some point you'll be done using your shiny new VM.  It could be that you just want to shut it down for a while to avoid compute costs when you don't need them machine, or it could be that you are done forever and want to delete the VM.  In this last section we'll cover a few scenarios</p>
+
+<ul>
+<li>Shutting down your VM to Stop Compute Billing</li>
+<li>Deleting a VM and it's Attached Disks</li>
+<li>Deleting the Entire Cloud Service and it's Deployments</li>
+</ul>
+
+<h4 id="Shutting_down_your_VM_to_compute">Shutting down your VM to compute</h4>
+
+<ol>
+<li><p>Open the Azure Management Portal and sign in with an account that has permissions to manage your VMs.  Switch to the <strong>&quot;VIRTUAL MACHINES&quot;</strong> page, and select the VM you wish to stop by clicking on it's <strong>Status</strong> (<strong>not its name</strong>), then click the <strong>&quot;SHUTDOWN&quot;</strong> button along the bottom:</p>
+
+<p><img src="images/04010-shutdown.png?raw=true" alt="04010-Shutdown" title="Shutdown">
+</p></li>
+<li><p>You will  be prompted to verify that you want to shutdown the VM, and that the IP addresses that were allocated to the VM will be released.  Click <strong>&quot;Yes&quot;</strong> to confirm the shutdown</p>
+
+<p><img src="images/04020-yes.png?raw=true" alt="04020-Yes" title="Yes">
+</p></li>
+<li><p>Wait until the VM's status reads <strong>&quot;Stopped (Deallocated)&quot;</strong>.   Once the machine is <strong>&quot;DEALLOCATED&quot;</strong> you are no longer being bill for compute costs.  However, you are still incurring storage costs for the <strong>&#42;.vhd</strong> files associated with the Virtual Hard Disks.  Of course, you can always start the VM back up by selecting it, and clicking the <strong>&quot;START&quot;</strong> button along the bottom.</p>
+
+<p><img src="images/04030-deallocated.png?raw=true" alt="04030-Deallocated" title="Deallocated">
+</p></li>
+</ol>
+
+<h4 id="Deleting_a_VM_and_its_Attached_Disks">Deleting a VM and it's Attached Disks</h4>
+
+<ol>
+<li><p>If you don't plan on using the VM anymore, you can delete it, and stop being billed for the <strong>&#42;.vhd</strong> file storage costs.  To delete a VM and it's attached disks, in the Azure Management Portal, on the <strong>&quot;VIRTUAL MACHINES&quot;</strong> page, select the VM and click the <strong>&quot;DELETE&quot;</strong> button along the bottom.  You can then choose to either <strong>&quot;Delete the attached disks&quot;</strong>, or to <strong>&quot;Keep the attached disks&quot;</strong> (in which case you will still pay for their storage):</p>
+<blockquote>
+<p><strong>Note:</strong> You might decide to keep the attached disks so you can download them to your local network before you delete them, or perhaps to create a new Virtual Machine using those same disks in the future.  Just remember that you will continue to incur storage costs for them. </p>
+</blockquote>
+<p><img src="images/04040-deletevm.png?raw=true" alt="04040-DeleteVM" title="Delete VM">
+</p></li>
+<li><p>When prompted, read the information, and if you aggree, click <strong>&quot;Yes&quot;</strong> to delete the VM and it's disks.</p>
+
+<p><img src="images/04050-confirm.png?raw=true" alt="04050-Confirm" title="Confirm">
+</p></li>
+</ol>
+
+<h4 id="Deleting_the_Entire_Cloud_Service_and_its_Deployments">Deleting the Entire Cloud Service and it's Deployments</h4>
+
+<ol>
+<li><p>The third option we'll cover here is to delete the <strong>Cloud Service</strong> that contains the VM, and all Web Role or Work Role deployments as well as any VMs and their attached disks.  This is an easy (albeit scary) way to delete an entire cloud service and everything in it.  <strong>BE CAREFUL!!!</strong>.</p></li>
+<li><p>In the Azure Management Portal, go to the <strong>&quot;CLOUD SERVICES&quot;</strong> Page, and select the Cloud Service that you want to delete, again by clicking on it's status, then click the <strong>&quot;DELETE&quot;</strong> button along the bottom, and choose from:</p>
+
+<ul>
+<li><strong>&quot;Delete the cloud service and its deployments&quot;</strong> - This is the most complete (and therefore most destructive) option.  This is the one we'll use, but <strong>MAKE SURE YOU MEAN IT!</strong></li>
+<li><strong>&quot;Delete all Virtual Machines&quot;</strong> - Deletes just the VMs but not their attached disks, and leaves Web Role and Worker Role deployments alone.</li>
+<li><strong>&quot;Delete all virtual machines and their attached disks&quot;</strong> - Deletes all VMs and their attached disks, but leaves Web Role and Worker Role deployments alone.</li>
+</ul>
+
+<p><img src="images/04060-deletecloudservice.png?raw=true" alt="04060-DeleteCloudService" title="Delete Cloud Service">
+</p></li>
+<li><p>Read the confirmation prompt, and if you agree, click <strong>&quot;Yes&quot;</strong> to delete the cloud service and all it's deployments, VMs and attached disks.</p>
+
+<p><img src="images/04070-yes.png?raw=true" alt="04070-Yes" title="Yes">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="summary"></a></p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>Congraulations!  In this demo you learned the basics of:</p>
+
+<ul>
+<li>Creating a Virtual Machine in Azure</li>
+<li>Configuring Security for Windows App Development</li>
+<li>Installing Additional Software as Needed</li>
+</ul>
+
+</div>
+</body>
+</html>
