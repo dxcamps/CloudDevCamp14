@@ -1,4 +1,4 @@
-﻿<a name="End" />
-## End ##
+﻿<a name="Begin" />
+## Begin ##
 
-Contains completed versions of the demo
+Contains starter projects

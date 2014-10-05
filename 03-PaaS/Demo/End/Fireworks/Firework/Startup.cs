@@ -12,7 +12,11 @@ namespace Firework
     {
         public void Configuration(IAppBuilder app)
         {
-            GlobalHost.DependencyResolver.UseRedis("[Redis cache cluster]", 6379, "[access key]", "Fireworks");
+            GlobalHost.DependencyResolver.UseRedis(
+              "fireworkcachebss.redis.cache.windows.net", 
+              6379,
+              "IDKpgxPRYMcPiBgYA6zn3cCG5B7M+Mzvp7GXklClFHw=", 
+              "Fireworks");
             app.MapSignalR();
         }
     }
