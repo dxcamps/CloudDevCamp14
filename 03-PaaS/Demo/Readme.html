@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="Title"></a></p>
+
+<h1 id="Platform_as_a_Service_PaaS_Demo">Platform as a Service (PaaS) Demo</h1>
+
+<hr>
+
+<p><a name="Overview"></a></p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>In this demo we will review a number of the Platform as a Service (PaaS) overings available on Microsoft Azure.  We'll start with a brief look Azure Redis Cache and Azure Web Sites.  We'll then dig deeper into Azure Cloud Services and how they can help you as the developer break your dependency on the physical machine your code runs on. </p>
+
+<hr>
+
+<p><a name="Setup"></a></p>
+
+<h2 id="Setup_and_Prerequisites">Setup and Prerequisites</h2>
+
+<p>To successfully complete this demo you need:</p>
+
+<ul>
+<li><a href="http://azure.microsoft.com">An active Azure Subscription</a></li>
+<li><a href="http://visualstudio.com/downloads">Visual Studio 2013</a>
+
+<ul>
+<li>Visual Studio Express 2013 with Update 3 for Web, or </li>
+<li>A full version of Visual Studio</li>
+</ul></li>
+<li><p><a href="http://go.microsoft.com/fwlink/p/?linkid=323510&clcid=0x409">Azure SDK 2.4 or later</a></p></li>
+<li><p>Some of the tasks create resources in Azure that take time to provision.  </p>
+
+<ul>
+<li>If you will be presenting this demo to a live audience it is helpful if you have pre-created resources for use through the demo.  You can then show how to create a new resource, but then switch to using your pre-created resource instead. </li>
+<li>If you are walking through this demo as a &quot;Hands-on-Lab&quot; the instructions spell out when you can expect a long delay.  Those are good times to take a break if needed.<br></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<p><a name="Tasks"></a></p>
+
+<h2 id="Tasks">Tasks</h2>
+
+<p>This demo is comprised of the following tasks:</p>
+
+<ul>
+<li><a href="#Task1">Review the Fireworks Sample</a></li>
+<li><a href="#Task2">Create Azure Redis Cache</a></li>
+<li><a href="#Task3">Publish to Azure Web Site</a> </li>
+<li><a href="#Task4">Publish to Cloud Service</a></li>
+<li><a href="#Task5">Clean Up</a></li>
+</ul>
+
+<hr>
+
+<p><a name="Task1"></a></p>
+
+<h2 id="Review_the_Fireworks_Web_Site">Review the Fireworks Web Site</h2>
+
+<p>The Fireworks sample web application is part of the <strong><a href="https://github.com/WindowsAzure-Samples">&quot;Windows Azure Samples&quot;</a></strong> .  There really isn't much code in the app, yet it creates an impressive interactive multi-user fireworks display using <a href="http://signalr.net/">SignalR</a> and a <a href="http://azure.microsoft.com/en-us/services/cache/">Redis Cache</a> up in Azure.  </p>
+
+<p><img src="images/01000-fireworksarchitecture.png?raw=true" alt="01000-FireworksArchitecture" title="FireworksArchitecture">
+</p>
+
+<p>The Website can run on multiple instances.  It uses SignalR to communicate with the clients connected to it.  If there are multiple website insances, each with their own clients, the instances communicate with each other using Redis Cache as a &quot;backplane&quot;. This means that if a user in one client causes and action (launching a firework in this case), the action can be communicated through the Redis Cache backplane to all the other website instances, and then in turn to each client connected to those instances.  </p>
+
+<ol>
+<li><p>Open the <strong>Begin\Fireworks\Fireworks.sln</strong> file in Visual Studio.  Then in the Solution Explorer, review the contents of the Web Application project: </p>
+
+<p><img src="images/01010-fireworksolution.png?raw=true" alt="01010-FireworkSolution" title="Firework Solution">
+</p></li>
+<li><p>There are really only a few key files in the solution (Hightlighted in the screenshot above, working our way from the bottom up):</p>
+<blockquote>
+<p><strong>Note:</strong> The following code is displayed for review purposes only.  <strong>YOU DO NOT NEED TO DO ANY CODE MODIFICATIONS! (YET)</strong></p>
+</blockquote>
+<ul>
+<li><strong>Startup.cs</strong> - Sets the SignalR <a href="http://msdn.microsoft.com/en-us/library/microsoft.aspnet.signalr.globalhost.dependencyresolver%28v=vs.118%29.aspx">GlobalHost.DependencyResolver</a> to use Redis (<a href="http://www.asp.net/signalr/overview/performance/scaleout-with-redis">learn more</a>) as a backplane. We'll update this code in just a bit to point to a Redis Cache instance we create in Azure.</li>
+</ul>
+
+<!-- mark:3 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">void</span> Configuration(IAppBuilder app)
+{
+<strong class="markLine">     GlobalHost.DependencyResolver.UseRedis(<span style="color:#8B0000">&quot;[Redis cache cluster]&quot;</span>, 6379, <span style="color:#8B0000">&quot;[access key]&quot;</span>, <span style="color:#8B0000">&quot;Fireworks&quot;</span>);</strong>
+     app.MapSignalR();
+}
+</code></pre>
+
+<ul>
+<li><strong>FireworkHub.cs</strong> - Defines the <a href="http://msdn.microsoft.com/en-us/library/microsoft.aspnet.signalr.hub%28v=vs.118%29.aspx">SignalR Hub</a> for the Firework website.  It implements the <code>Add(int type, double x, double y, string color, int tail)</code> Method which in turns invokes the <code>addFirework</code> method on each client. The <code>addFirework</code> method is told what kind of firework to draw (simple or complex), where to draw it (x,y), what color it should be, and what kind of tail the sparks have).  Each client then implements an addFirework handler to draw the firework as specified.  Cool!</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">void</span> Add(<span style="color:#0000FF">int</span> type, <span style="color:#0000FF">double</span> x, <span style="color:#0000FF">double</span> y, <span style="color:#0000FF">string</span> color, <span style="color:#0000FF">int</span> tail)
+{
+     Clients.All.addFirework(
+          <span style="color:#0000FF">new</span>
+          {
+                Type = type,
+                X = x,
+                Y = y,
+                Color = color,
+                TailType = tail
+          }
+          );
+}
+</code></pre>
+
+<ul>
+<li><strong>Views\Home\Index.cshtml</strong> - Is the only view for the application.  It creates the User Interface and implements the logic for creating and visualizing fireworks on a canvas.  It ties into SignalR to send and receive firework instances to other clients, and draw them on the screen.</li>
+</ul>
+
+<span class="codelanguage">JavaScript</span><pre><code class="JavaScript">
+<span style="color:#008000">//...Classes for the Fireworks, and methods to draw them on the HTML5 canvas are in here as well!</span>
+
+<span style="color:#008000">//...The following code isn&#39;t shown in the same order it appears in the file, it has been re-organized to support the discussion about it. </span>
+
+<span style="color:#008000">//Wire up an event handler so that when the user clicks on the canvas, we send the firework information to all the other connected clients.</span>
+canvas.addEventListener(&#39;click&#39;, sendFirework, <span style="color:#0000FF">false</span>);
+
+<span style="color:#008000">//...</span>
+
+<span style="color:#008000">//This creates the firework instance and sends details to the hub</span>
+<span style="color:#0000FF">function</span> sendFirework(evt)
+{
+     <span style="color:#008000">//User clicks on canvas - request user to broadcast the event</span>
+     <span style="color:#0000FF">if</span> (!enableUI)
+          <span style="color:#0000FF">return</span>;
+     <span style="color:#0000FF">var</span> firework;
+     <span style="color:#0000FF">if</span> (preType == 1)
+          firework = <span style="color:#0000FF">new</span> SimpleFirework(evt.clientX - rect.left + <span style="color:#0000FF">document</span>.documentElement.scrollLeft,
+                                                        evt.clientY - rect.<span style="color:#0000FF">top</span> + <span style="color:#0000FF">document</span>.documentElement.scrollTop, $(&#39;#c_&#39; + preColor).data(&#39;value&#39;), preTrail);
+     <span style="color:#0000FF">else</span>
+          firework = <span style="color:#0000FF">new</span> ComplexFirework(evt.clientX - rect.left,
+                                                  evt.clientY - rect.<span style="color:#0000FF">top</span>, $(&#39;#c_&#39; + preColor).data(&#39;value&#39;));
+
+     hub.server.add(preType, firework.BaseX, firework.BaseY, $(&#39;#c_&#39; + preColor).data(&#39;value&#39;), preTrail);
+}
+
+<span style="color:#008000">//...</span>
+
+<span style="color:#008000">//This method is invoked whenever a firework is added by another client.  The current client then adds that firework to the collection.</span>
+hub.client.addFirework = <span style="color:#0000FF">function</span> (firework) {
+     <span style="color:#008000">//Server broadcasted the event. Respond by adding the firework to local state.</span>
+     <span style="color:#0000FF">if</span> (firework.Type == 1)
+          fireworks.push(<span style="color:#0000FF">new</span> SimpleFirework(firework.X, firework.Y, firework.Color, firework.TailType));
+     <span style="color:#0000FF">else</span>
+          fireworks.push(<span style="color:#0000FF">new</span> ComplexFirework(firework.X, firework.Y, firework.Color, firework.TailType));
+};
+
+<span style="color:#008000">//...</span>
+</code></pre></li>
+<li><p>Before you can actually run the sample web site though, there are a few things we need to fix.  First, you need to restore the NuGet Packages.  </p></li>
+<li><p>From the Visual Studio menu bar, select <strong>&quot;Tools&quot;</strong> | <strong>&quot;NuGet Package Manager&quot;</strong> | <strong>&quot;Package Manager Console&quot;</strong>, then in the <strong>&quot;Package Manager Console&quot;</strong> window, click the <strong>&quot;Restore&quot;</strong> button to restore the missing NuGet packages. </p>
+
+<p><img src="images/01020-restorenugetpackages.png?raw=true" alt="01020-RestoreNuGetPackages" title="Restore NuGet Packages">
+</p></li>
+<li><p>We still aren't ready to run it yet.  Continue with the next task</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Task2"></a></p>
+
+<h2 id="Create_Azure_Redis_Cache">Create Azure Redis Cache</h2>
+
+<p>In this task we'll create an Azure Redis Cache instance for SignalR to use as it's backplane.  Basically, this just means that SignalR can use the RedisCache to share client information across a collection of website front ends.  It helps keep client connections in sync when there are multiple servers hosting a web site.  </p>
+
+<p>The <a href="http://msdn.microsoft.com/en-us/library/azure/dn690523.aspx">Azure Redis Cache</a> service is a &quot;Platform as a Service&quot; implementation of Redis.  That means that you don't need to go stand up servers to install redis on.  Azure takes care of that for you and gives you a fully compatible Redis cache to use in the cloud!  Cool! </p>
+
+<ol>
+<li><p>Open the <a href="https://portal.azure.com"><strong>NEW</strong> Azure Portal</a> (<a href="https://portal.azure.com">https://portal.azure.com</a>) (Redis Cache support is only available in the new portal) and login with the Microsoft Account associated with the subscription you want to use. </p></li>
+<li><p>Click the <strong>+ NEW</strong> button in the lower left corner, and select <strong>&quot;Redis Cache&quot;</strong> from the list of options:</p>
+
+<p><img src="images/02010-rediscache.png?raw=true" alt="02010-RedisCache" title="Redis Cache">
+</p></li>
+<li><p>In the <strong>&quot;New Redis Cache&quot;</strong> blade, enter a name for your new cache:</p>
+<blockquote>
+<p><strong>Note:</strong> Redis Cache names must be only numbers or lower case characters, can't start with a number, or contain any other symbols (including spaces)</p>
+
+<p><strong>Note:</strong> You are only specifying the DNS host name, the fully qualified DNS name will be <strong>&lt;cachename&gt;.redis.cache.windows.net</strong></p>
+</blockquote>
+<p><img src="images/02020-rediscachename.png?raw=true" alt="02020-RedisCacheName" title="Redis Cache Name">
+</p></li>
+<li><p>The pricing tier defaults to a Standard 1GB cache. We don't need that much cache for this demo.  Click on <strong>&quot;Pricing Tier&quot;, then in the **&quot;Recommended pricing tiers&quot;</strong> blade, click <strong>&quot;BROWSE ALL PRICING TIERS&quot;</strong>.</p>
+
+<p><img src="images/02030-browsepricingtiers.png?raw=true" alt="02030-BrowsePricingTiers" title="Browse Pricing Tiers">
+</p></li>
+<li><p>In the <strong>&quot;Choose your pricing tier&quot;</strong> blade, scroll down to find the <strong>&quot;Basic 250MB&quot;</strong> option, and click on it to select it, then click the <strong>&quot;Select&quot;</strong> button:</p>
+
+<p><img src="images/02040-basiccache.png?raw=true" alt="02040-BasicCache" title="Basic Cache">
+</p></li>
+<li><p>Back in the <strong>&quot;Recommended pricing tiers&quot;</strong> blade, again click the <strong>&quot;Select&quot;</strong> button to confirm the change:</p>
+
+<p><img src="images/02050-confirmbasiccache.png?raw=true" alt="02050-ConfirmBasicCache" title="Confirm Basic Cache">
+</p></li>
+<li><p>On the <strong>&quot;New Redis Cache&quot;</strong> blade, click the <strong>&quot;RESOURCE GROUP&quot;</strong> option, then in the <strong>&quot;Resource group&quot;</strong> blade, click <strong>&quot;Create a new resource group&quot;</strong>.  In the <strong>&quot;Create resource group&quot;</strong> blade, enter a name (no spaces) for your Resource Group and click <strong>&quot;OK&quot;</strong> to create the new group.  </p>
+
+<p><img src="images/02060-newresourcegroup.png?raw=true" alt="02060-NewResourceGroup" title="New Resource Group">
+</p></li>
+<li><p>If you have multiple subscriptions, you will  be prompted to select the subscription you want to use.  On the <strong>&quot;New Redis Cache&quot; blade, Click the **&quot;SUBSCRIPTION&quot;</strong> option, and then in the <strong>&quot;Subscription&quot;</strong> blade, select the subscription you want to use, then click the <strong>&quot;x&quot;</strong> button on the <strong>&quot;Subscription&quot;</strong> blade to close it. </p>
+
+<p><img src="images/02070-choosesubscription.png?raw=true" alt="02070-ChooseSubscription" title="Choose Subscription">
+</p></li>
+<li><p>Next, we need to pick the location for the cache.  On the <strong>&quot;New Redis Cache&quot;</strong> blade, click the <strong>&quot;LOCATION&quot;</strong> option, and select the desired location from the <strong>&quot;Location&quot;</strong> blade.</p>
+
+<p><img src="images/02080-cachelocation.png?raw=true" alt="02080-CacheLocation" title="Cache Location">
+</p></li>
+<li><p>With all the options set, you can now create the cache.  Leave the <strong>&quot;Add to Startboard&quot;</strong> checkbox checked (this will add a tile for the cache to the portal start board), and click the <strong>&quot;Create&quot;</strong> button.</p>
+
+<p><img src="images/02090-createcache.png?raw=true" alt="02090-CreateCache" title="Create Cache">
+</p></li>
+<li><p><strong>It will take some time to create the cache, perhaps 10-20 minutes</strong>.  You can monitor the status on either the <strong>Startboard</strong>, or on the <strong>Notifications</strong> tab:</p>
+
+<p><img src="images/02100-provisioningcache.png?raw=true" alt="02100-ProvisioningCache" title="Provisioning Cache">
+</p></li>
+<li><p>Once the cache has been provisioned, you should see it on the Startboard, and blade with the cache properties should open by default (if not, just click on the tile for the cache on the Startboard):</p>
+
+<p><img src="images/02110-cachetileandblade.png?raw=true" alt="02110-CacheTileAndBlade" title="Cache Tile and Blade">
+</p></li>
+<li><p>We need to collect a few details from our new cache so we can update the <strong>&quot;Startup.cs&quot;</strong> code in our project.  First, Click on the <strong>&quot;Properties&quot;</strong> button to retrieve the host name for the cache:</p>
+
+<p><img src="images/02120-cachehostname.png?raw=true" alt="02120-CacheHostName" title="Cache Host Name">
+</p></li>
+<li><p>Next, click on the <strong>&quot;Keys&quot;</strong> button and in the <strong>&quot;Manage Keys&quot;</strong> blade, retrieve the <strong>&quot;PRIMARY&quot;</strong> key</p>
+
+<p><img src="images/02130-cacheaccesskey.png?raw=true" alt="02130-CacheAccessKey" title="Cache Access Key">
+</p></li>
+<li><p>Use the host name and access key values from above to update the code in the <strong>&quot;Startup.cs&quot;</strong> file:</p>
+
+<p><img src="images/02140-startupcscodetoreplace.png?raw=true" alt="02140-StartupCsCodeToReplace" title="Startup.cs Code to Replace">
+</p></li>
+<li><p>For example:</p>
+
+<p><img src="images/02150-repalcedcode.png?raw=true" alt="02150-RepalcedCode" title="ReplacedCode">
+</p></li>
+<li><p>Finally, you are ready to build the sample, and run it locally.  You should see the following UI in the browser:</p>
+<blockquote>
+<p><strong>Note:</strong> try clicking in the sky above the skyline to set off fireworks!</p>
+
+<p><strong>Note:</strong> You can also open a second copy of your browser and navigate to the same URL to see SignalR in action. Notice that clicking on either browser instances canvas causes fireworks in both browsers!  Cool!</p>
+</blockquote>
+<p><img src="images/02160-samplerunninglocally.png?raw=true" alt="02160-SampleRunningLocally" title="Sample Running Locally">
+</p></li>
+<li><p>Close the browsers to stop debugging when you are done testing the sample web application locally.</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Task3"></a></p>
+
+<h2 id="Publish_to_Azure_Web_Site">Publish to Azure Web Site</h2>
+
+<h3 id="If_you_dont_want_to_publish_to_a_website_you_can_skip_this_task_and_go_directly_to_Task_4_stronga_hrefTask4Publish_to_Cloud_Serviceastrong">If you don't want to publish to a website, you can skip this task and go directly to Task 4, <strong><a href="#Task4">&quot;Publish to Cloud Service&quot;</a></strong></h3>
+
+<p>So far we have an ASP.NET Web application that runs locally, but uses an Azure Redis Cache in the cloud.  The only clients that can connect to the web site right now though are browser sessions running on the development box.  In this task we'll look at using a simple, but powerful PaaS solution in Azure called &quot;Websites&quot;</p>
+
+<ol>
+<li><p>Open the new Azure Portal in the browser (<a href="https://portal.azure.com">https://portal.azure.com</a>) and login.  </p></li>
+<li><p>Click the <strong>&quot;+ NEW&quot;</strong> button in the lower left corner, and select <strong>&quot;Website&quot;</strong> from the list of options:</p>
+
+<p><img src="images/03010-website.png?raw=true" alt="03010-Website" title="Website">
+</p></li>
+<li><p>In the <strong>&quot;Website&quot;</strong> blade, enter a valid and unique hostname for your website.  Note that the fully qualified domain name will be <strong>&lt;hostname&gt;.azurewebsites.net</strong> </p>
+
+<p><img src="images/03020-websitename.png?raw=true" alt="03020-WebsiteName" title="Website Name">
+</p></li>
+<li><p>Next, click on the <strong>&quot;WEB HOSTING PLAN&quot;</strong> option, and in the <strong>&quot;Web hosting plan&quot;</strong> blade select an existing Free hosting plan (no need to incur charges for this demo), then click <strong>&quot;OK&quot;</strong>:</p>
+<blockquote>
+<p><strong>Note:</strong> the hosting plan can be used to manage your costs, and to group sites together into the same plan.  Learn more about hosting plans here: <a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-web-hosting-plan-overview/">http://azure.microsoft.com/en-us/documentation/articles/web-sites-web-hosting-plan-overview/</a>.</p>
+</blockquote>
+<p><img src="images/03030-freehostingplan.png?raw=true" alt="03030-FreeHostingPlan" title="Free Hosting Plan">
+</p></li>
+<li><p>If you do not have a free hosting plan already, you can create one:</p>
+
+<ul>
+<li>In the <strong>&quot;Web hosting plan&quot;</strong> blade, scroll down and click on <strong>&quot;Browse all pricing tiers&quot;</strong>:</li>
+<li>In the <strong>&quot;Choose your pricing tier&quot;</strong> blade, select the <strong>&quot;F1 Free&quot;</strong> pricing tier, then click <strong>&quot;Select</strong>&quot;</li>
+<li><p>Then give your new hosting plan a name, and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/03040-browseallpricingtiers.png?raw=true" alt="03040-BrowseAllPricingTiers" title="Browse All Pricing Tiers">
+</p>
+
+<p><img src="images/03050-freepricingtier.png?raw=true" alt="03050-FreePricingTier" title="Free Pricing Tier">
+</p>
+
+<p><img src="images/03060-hostingplanname.png?raw=true" alt="03060-HostingPlanName" title="Hosting Plan Name">
+</p></li>
+</ul></li>
+<li><p>Back on the <strong>&quot;Website&quot;</strong> blade, click the <strong>&quot;RESOURCE GROUP&quot;</strong> option, and scroll down to select the Resource Group you created earlier when provisioning the Redis Cache:</p>
+
+<p><img src="images/03070-select-resource-group.png?raw=true" alt="03070-Select Resource Group" title="Select Resource Group">
+</p></li>
+<li><p>If the <strong>&quot;Website&quot;</strong> blade has a <strong>&quot;Subscription&quot;</strong> option, it should be locked, because the Resource Group you just selected belongs only to a single subscription:</p>
+
+<p><img src="images/03080-subscriptionlocked.png?raw=true" alt="03080-SubscriptionLocked" title="Subscription Locked">
+</p></li>
+<li><p>Next, click on the <strong>&quot;LOCATION&quot;</strong> option, and select the data center where you want the website to run:</p>
+
+<p><img src="images/03090-location.png?raw=true" alt="03090-Location" title="Location">
+</p></li>
+<li><p>Finally, at the bottom of the <strong>&quot;Website&quot;</strong> blade, ensure that <strong>&quot;Add to Startboard&quot;</strong> is <strong>CHECKED</strong>, then click <strong>&quot;Create&quot;</strong></p>
+
+<p><img src="images/03100-createwebsite.png?raw=true" alt="03100-CreateWebsite" title="Create Website">
+</p></li>
+<li><p>It may take a few minutes to provision the website.  You can monitor the provisioning of your new website back on the startboard:</p>
+
+<p><img src="images/03110-websiteprovisioning.png?raw=true" alt="03110-WebsiteProvisioning" title="Website Provisioning">
+</p></li>
+<li><p>Once the website is created, you should see a tile for it on the Startboard:</p>
+
+<p><img src="images/03120-websiteonstartboard.png?raw=true" alt="03120-WebsiteOnStartboard" title="Website on Startboard">
+</p></li>
+<li><p>If you click on the tile for the website, a the website's blade will open.  From there you can perform various monitoring and configuration actions.  Take a moment to investigate the website blade options, then close it when you are done:</p>
+
+<p><img src="images/03130-websiteblade.png?raw=true" alt="03130-WebsiteBlade" title="Website Blad">
+</p></li>
+<li><p>Back in Visual Studio, in the <strong>&quot;Solution Explorer&quot;</strong>, right-click on the <strong>&quot;Firework&quot;</strong> project, and select <strong>&quot;Publish&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/03140-publishwebsite.png?raw=true" alt="03140-PublishWebsite" title="Publish Website">
+</p></li>
+<li><p>In the <strong>&quot;Publish Web&quot;</strong> window, select <strong>&quot;Microsoft Azure Websites&quot;</strong>:</p>
+
+<p><img src="images/03150-publishweb.png?raw=true" alt="03150-PublishWeb" title="Publish Web">
+</p></li>
+<li><p>In the <strong>&quot;Select Existing Website&quot;</strong> window, if you aren't already signed into your Azure subscription, click the <strong>&quot;Sign In&quot;</strong> button:</p>
+
+<p><img src="images/03160-signin.png?raw=true" alt="03160-SignIn" title="Sign In">
+</p></li>
+<li><p>And enter your credentials to login into your Microsoft Azure subscription:</p>
+
+<p><img src="images/03170-azurecredentials.png?raw=true" alt="03170-AzureCredentials" title="Azure Credentials">
+</p></li>
+<li><p>Then, from the <strong>&quot;Existing Websites&quot;</strong> drop down, select the website we just created in the portal:</p>
+
+<p><img src="images/03180-selectwebsite.png?raw=true" alt="03180-SelectWebsite" title="Select Website">
+</p></li>
+<li><p>Then click <strong>&quot;OK&quot;</strong> to confirm the selection:</p>
+
+<p><img src="images/03190-confirmwebsite.png?raw=true" alt="03190-ConfirmWebsite" title="Confirm Website">
+</p></li>
+<li><p>In the <strong>&quot;Publish Web&quot;</strong> window, review the options, <strong>BUT DON'T CHANGE ANYTHING</strong>.  Click <strong>&quot;Publish&quot;</strong> when you are ready to publish the website:</p>
+
+<p><img src="images/03200-publish.png?raw=true" alt="03200-Publish" title="Publish">
+</p></li>
+<li><p>The site should publish within just a few seconds, when it's done, the Visual Studio <strong>&quot;Output&quot;</strong> window should show you the status, and the URL for the live site:</p>
+
+<p><img src="images/03210-publishstatus.png?raw=true" alt="03210-PublishStatus" title="Publish Status">
+</p></li>
+<li><p>Finally, the browser should open to the site.  You can open an additional browser to see SignalR in action.  As you click on the Night Skyline canvas in one browser, you should see fireworks in all connected clients.  Close the browsers when you are done:</p>
+
+<p><img src="images/03220-siteinbrowsers.png?raw=true" alt="03220-SiteInBrowsers" title="Site in Browsers">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Task4"></a></p>
+
+<h2 id="Publish_to_Cloud_Service">Publish to Cloud Service</h2>
+
+<p>So far, we have seen two different Platform as a Service (PaaS) offerings in Azure: <a href="http://azure.microsoft.com/en-us/services/cache/">Redis Cache</a> and <a href="http://azure.microsoft.com/en-us/documentation/services/websites/">Websites</a>.  There are other's including <a href="http://azure.microsoft.com/en-us/documentation/services/mobile-services/">Mobile Services</a>, <a href="http://azure.microsoft.com/en-us/documentation/services/sql-database/">SQL Database</a>, and more.  </p>
+
+<p>The original PaaS offering on Azure however was <strong><a href="http://azure.microsoft.com/en-us/documentation/services/cloud-services/">&quot;Cloud Services&quot;</a></strong> with on or more <strong>&quot;Web Role&quot;</strong> or <strong>&quot;Worker Role&quot;</strong> instances. </p>
+
+<p>As Websites become more and more powerful and configurable, the reason to choose Cloud Services over Websites is becoming less and less clear, however, for the time being the major benefits of a Cloud Service over a Web Site include:</p>
+
+<ul>
+<li><p>With Cloud Services you have administrative access to the VMs running your application.  This gives you the ability to perform configuration tasks (like installing custom 3rd party software) that isn't currently possible with Websites. </p></li>
+<li><p>Cloud services offer both **
+Web Roles&quot;** and <strong>&quot;Worker Roles&quot;</strong> each with extensive configurability making it easier to create multi-tier applications.</p></li>
+<li><p>You can use Remote Desktop to remotely monitor the VMs running your Cloud Service applications. </p></li>
+</ul>
+
+<p>Similarly, Cloud Services have some benefits over Virtual Machines:</p>
+
+<ul>
+<li><p>You aren't responsible for configuring the base operating system, service packs, hotifxes, etc. </p></li>
+<li><p>Because any custom configuration is specified either in the cloud services configuration files (*.csdef and *.cscfg), or custom startup scripts, it can be applied to as many instances of the role as you desire.  This makes scalability simple.  </p></li>
+<li><p>Web Role and Worker Role VM instances are <strong>&quot;Stateless&quot;</strong>. As long as you store all persistent data OFF of the instance (in an Azure SQL Databse, Azure Storage, etc), there is nothing to loose if the VM instance becomes corrupt.  The Azure Fabric controller can simply spin up a new instance and re-deploy your application to it.  </p></li>
+</ul>
+
+<p>In this last task, well add a cloud Project to the Firework solution in Visual Studio, and configure the Firework website as a &quot;Web Role&quot;.  Finally, we'll publish that Cloud Service into Azure. </p>
+
+<ol>
+<li><p>You will continue with the project you used in the previous tasks because the Redis Cache configuration performed earlier will be required here as well.  So you must have at least completed the <strong><a href="#Task2">&quot;Create Azure Redis Cache&quot;</a></strong> task, Ensure that the Firework Solution is open in Visual Studio.</p></li>
+<li><p>In the <strong>&quot;Solution Explorer&quot;</strong> window, right click on the <strong>&quot;Firework&quot;</strong> Solution (not the project) and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Project...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04010-addnewproject.png?raw=true" alt="04010-AddNewProject" title="AddNewProject">
+</p></li>
+<li><p>In the <strong>&quot;Add New Project&quot;</strong> window, in the list of <strong>&quot;Installed&quot;</strong> Templates, select <strong>&quot;Visual C#&quot;</strong> | <strong>&quot;Cloud&quot;</strong> | <strong>&quot;Azure Cloud Service&quot;</strong>.  Give the new cloud service project a <strong>&quot;Name&quot;</strong> and click <strong>&quot;OK&quot;</strong> to create the project.</p>
+
+<p><img src="images/04020-addnewcloudproject.png?raw=true" alt="04020-AddNewCloudProject" title="AddNewCloudProject">
+</p></li>
+<li><p>In the <strong>&quot;New Microsoft Azure Cloud Service&quot;</strong> window, review the list of different roles, but <strong>&quot;DON'T ADD ANY TO THE PROJECT&quot;</strong>.  Click <strong>&quot;OK&quot;</strong> to create the cloud service:</p>
+
+<p><img src="images/04030-newmicrosoftazurecloudservice.png?raw=true" alt="04030-NewMicrosoftAzureCloudService" title="New Microsoft Azure Cloud Service">
+</p></li>
+<li><p>In the Visual Studio <strong>&quot;Solution Explorer&quot;</strong> review the contents of the new Cloud Service project:</p>
+
+<ul>
+<li><strong>&quot;Roles&quot;</strong> shows you the various roles in the cloud service.  In this case, we don't have any roles yet.</li>
+<li><strong>&quot;ServiceConfiguration.Cloud.cscfg&quot;</strong> and <strong>&quot;ServiceConfiguration.Local.cscfg&quot;</strong> store the configuration values for the cloud service.  The <strong>&quot;Cloud&quot;</strong> file contains settings that will be used when you deploy to the cloud, the <strong>&quot;Local&quot;</strong> file uses settings that will be used when running locally in the debugger.  You can create additional configuration files for different scenarios if needed. Because we haven't added any roles to the cloud service yet, the Service Configuration is empty.</li>
+<li><strong>&quot;ServiceDefinition.csdef&quot;</strong> contains the Service Definition.  It is used by the Azure Fabric Controller in the cloud to determine what kind of role VMs you need, and how many instances of each. It also describes the various endpoints that need to be configured for communication with and between those instances.  Because we haven't added any Roles to the cloud service yet, the Service Definition is empty:</li>
+</ul>
+
+<p><img src="images/04040-cloudserviceproject.png?raw=true" alt="04040-CloudServiceProject" title="Cloud Service Project">
+</p></li>
+<li><p>Right click on the <strong>&quot;Roles&quot;</strong> node, and select </p>
+
+<p><img src="images/04050-addwebrole.png?raw=true" alt="04050-AddWebRole" title="Add Web Role">
+</p></li>
+<li><p>In the <strong>&quot;Associate with Role Project&quot;</strong> window, select the project (there should only be one) for the Firework Website in the same solution, and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/04060-selectwebproject.png?raw=true" alt="04060-SelectWebProject" title="Select Web Project">
+</p></li>
+<li><p>In the <strong>&quot;Solution Explorer&quot;</strong>, right-click on the new <strong>&quot;Firework&quot;</strong> web role, and select <strong>&quot;Properties&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04070-openroleproperties.png?raw=true" alt="04070-OpenRoleProperties" title="Open Role Properites">
+</p></li>
+<li><p>On the <strong>&quot;Configuration&quot;</strong> tab, review the configuration of the Role.  For instance, notice that by default it will run in a Single instance, using the Small VM size:</p>
+
+<p><img src="images/04080-roleconfiguration.png?raw=true" alt="04080-RoleConfiguration" title="Role Configuration">
+</p></li>
+<li><p>On the <strong>&quot;Settings&quot;</strong> tab, note that there is a single default setting that points to the Diagnostics storage.  You could add other settings here if you needed to supply values to the role after is was deployed:</p>
+
+<p><img src="images/04090-rolesettings.png?raw=true" alt="04090-RoleSettings" title="Role Settings">
+</p></li>
+<li><p>On the <strong>&quot;Endpoints&quot;</strong> tab, notice there is a single endpoint that allows http traffic on port 80 to be directed into the role instance.  If you wanted to enable https for example, you wouuld add a second endpoint for port 443:</p>
+
+<p><img src="images/04100-roleendpoints.png?raw=true" alt="04100-RoleEndpoints" title="Role Endpoints">
+</p></li>
+<li><p>Review the other properties as you wish, but you don't need to make any changes.  Close the *&quot;Firework [Role]&quot;** properties page when you are done.</p></li>
+<li><p>Open the <strong>&quot;ServiceDefinition.csdef&quot;</strong> (<strong>DON'T MAKE ANY CHANGES TO IT</strong>) and note the contents.  You can see the <strong>&quot;definition&quot;</strong> of the Web Role, and it's single endpoint:</p>
+
+<span class="codelanguage">xml</span><pre><code class="xml"><span style="color:#0000FF">&lt;?</span>xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;<span style="color:#0000FF">?&gt;</span>
+<span style="color:#0000FF">&lt;</span><span style="color:#800000">ServiceDefinition</span> 
+  <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;FireworkCloudServiceBSS&quot;</span> 
+  <span style="color:#FF0000">xmlns</span>=<span style="color:#0000FF">&quot;http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition&quot;</span> 
+  <span style="color:#FF0000">schemaVersion</span>=<span style="color:#0000FF">&quot;2014-06.2.4&quot;</span><span style="color:#0000FF">&gt;</span>
+  <span style="color:#0000FF">&lt;</span><span style="color:#800000">WebRole</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Firework&quot;</span> <span style="color:#FF0000">vmsize</span>=<span style="color:#0000FF">&quot;Small&quot;</span><span style="color:#0000FF">&gt;</span>
+     <span style="color:#0000FF">&lt;</span><span style="color:#800000">Sites</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">Site</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Web&quot;</span><span style="color:#0000FF">&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#800000">Bindings</span><span style="color:#0000FF">&gt;</span>
+             <span style="color:#0000FF">&lt;</span><span style="color:#800000">Binding</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Endpoint1&quot;</span> <span style="color:#FF0000">endpointName</span>=<span style="color:#0000FF">&quot;Endpoint1&quot;</span> <span style="color:#0000FF">/&gt;</span>
+          <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Bindings</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Site</span><span style="color:#0000FF">&gt;</span>
+     <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Sites</span><span style="color:#0000FF">&gt;</span>
+     <span style="color:#0000FF">&lt;</span><span style="color:#800000">Endpoints</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">InputEndpoint</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Endpoint1&quot;</span> <span style="color:#FF0000">protocol</span>=<span style="color:#0000FF">&quot;http&quot;</span> <span style="color:#FF0000">port</span>=<span style="color:#0000FF">&quot;80&quot;</span> <span style="color:#0000FF">/&gt;</span>
+     <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Endpoints</span><span style="color:#0000FF">&gt;</span>
+     <span style="color:#0000FF">&lt;</span><span style="color:#800000">Imports</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">Import</span> <span style="color:#FF0000">moduleName</span>=<span style="color:#0000FF">&quot;Diagnostics&quot;</span> <span style="color:#0000FF">/&gt;</span>
+     <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Imports</span><span style="color:#0000FF">&gt;</span>
+  <span style="color:#0000FF">&lt;/</span><span style="color:#800000">WebRole</span><span style="color:#0000FF">&gt;</span>
+<span style="color:#0000FF">&lt;/</span><span style="color:#800000">ServiceDefinition</span><span style="color:#0000FF">&gt;</span>
+</code></pre></li>
+<li><p>Open the <strong>&quot;ServiceConfiguration.Cloud.cscfg&quot;</strong> file and review it's contents.  <strong>AGAIN, DON'T MAKE ANY CHANGES</strong>:</p>
+
+<span class="codelanguage">XML</span><pre><code class="XML"><span style="color:#0000FF">&lt;?</span>xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;<span style="color:#0000FF">?&gt;</span>
+<span style="color:#0000FF">&lt;</span><span style="color:#800000">ServiceConfiguration</span> 
+  <span style="color:#FF0000">serviceName</span>=<span style="color:#0000FF">&quot;FireworkCloudServiceBSS&quot;</span> 
+  <span style="color:#FF0000">xmlns</span>=<span style="color:#0000FF">&quot;http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration&quot;</span> 
+  <span style="color:#FF0000">osFamily</span>=<span style="color:#0000FF">&quot;4&quot;</span> 
+  <span style="color:#FF0000">osVersion</span>=<span style="color:#0000FF">&quot;*&quot;</span> 
+  <span style="color:#FF0000">schemaVersion</span>=<span style="color:#0000FF">&quot;2014-06.2.4&quot;</span><span style="color:#0000FF">&gt;</span>
+  <span style="color:#0000FF">&lt;</span><span style="color:#800000">Role</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Firework&quot;</span><span style="color:#0000FF">&gt;</span>
+     <span style="color:#0000FF">&lt;</span><span style="color:#800000">Instances</span> <span style="color:#FF0000">count</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#0000FF">/&gt;</span>
+     <span style="color:#0000FF">&lt;</span><span style="color:#800000">ConfigurationSettings</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">Setting</span> 
+          <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString&quot;</span> 
+          <span style="color:#FF0000">value</span>=<span style="color:#0000FF">&quot;UseDevelopmentStorage=true&quot;</span> <span style="color:#0000FF">/&gt;</span>
+     <span style="color:#0000FF">&lt;/</span><span style="color:#800000">ConfigurationSettings</span><span style="color:#0000FF">&gt;</span>
+  <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Role</span><span style="color:#0000FF">&gt;</span>
+<span style="color:#0000FF">&lt;/</span><span style="color:#800000">ServiceConfiguration</span><span style="color:#0000FF">&gt;</span>
+</code></pre></li>
+<li><p>You can see from above that the GUI based <strong>&quot;Properties&quot;</strong> page is really just a managed way to edit the <strong>&quot;ServiceDefinition.csdef&quot;</strong> and <strong>&quot;ServiceConfiguration.&lowast;.cscfg&quot;</strong> files.  You could edit the XML directly, but you run the risk of making mistakes.  The Role <strong>&quot;Properities&quot;</strong> page helps to ensure to only valid values are used, and that the XML is typed correctly.</p></li>
+<li><p>Next, right-click on the Cloud Service project you created, and select <strong>&quot;Properties&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04110-opencloudserviceproperties.png?raw=true" alt="04110-OpenCloudServiceProperties" title="Open Cloud Service Properites">
+</p></li>
+<li><p>Switch to the <strong>&quot;Development&quot;</strong> tab, and review the options.  You can click on the name of each to get a definition of the property. <strong>DON'T MAKE ANY CHANGES</strong>:</p>
+
+<p><img src="images/04120-developmentproperties.png?raw=true" alt="04120-DevelopmentProperties" title="Development Properties">
+</p></li>
+<li><p>On the <strong>&quot;Web&quot;</strong> tab notice that Visual Studio will host the Web Site in <strong>&quot;IIS Express&quot;</strong> by default, and that an emulator that mimics the <strong>&quot;Azure Fabric&quot;</strong> will run.  By default the <strong>&quot;Emulator Express&quot;</strong> is used.  The <strong>&quot;Emulator Express&quot; supports multiple roles (web role and worker role), but only a single instance of each.  If you want to test with multiple role instances of any role you can switch to the **&quot;Full Emulator&quot;</strong>. , <strong>DON'T MAKE ANY CHANGES</strong>:</p>
+
+<p><img src="images/04130-webproperties.png?raw=true" alt="04130-WebProperties" title="Web Properties">
+</p></li>
+<li><p>Close the properties page when you are done looking. </p></li>
+<li><p>By default, when you added the Cloud Service project to the solution, the new project should have been set as the <strong>&quot;Startup Project&quot;</strong>, you can tell that is the case if the project name in the <strong>&quot;Solution Explorer&quot;</strong> is bold.  If it isn't, you can right click on the project, and select <strong>&quot;Set as StartUp Project&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04140-startupproject.png?raw=true" alt="04140-StartupProject" title="Startup Project">
+</p></li>
+<li><p>On the Visual Studio Tool Bar, hit the <strong>&quot;Internet Explorer&quot;</strong> button to start a debug session in IE.  You should see a couple of windows appear (if this is the first time you have debugged a Cloud Service during this session) that indicate that the <strong>&quot;Storage Emulator&quot;</strong> and <strong>&quot;Compute Emulator&quot;</strong> are being started. </p>
+
+<p><img src="images/04150-startdebug.png?raw=true" alt="04150-StartDebug" title="Start Debug Session">
+</p></li>
+<li><p>Once the emulators have started, the Cloud Service will be deployed, and the browser window should open with the site loaded.  In the System Tray, if you click on the arrow to <strong>&quot;Show hidden icons&quot;</strong>, you should see a new icon that looks like the Windows logo.  That icon represents the Azure emulators.  If you right click on the Icon, you can both view, or shutdown the emulators.  Select <strong>&quot;Show Compute Emulator UI&quot;</strong></p>
+
+<p><img src="images/04160-showcomputeemulatorui.png?raw=true" alt="04160-ShowComputeEmulatorUI" title="Show Compute Emulator UI">
+</p></li>
+<li><p>Remember, that by default the <strong>&quot;Emulator Express&quot;</strong> will be used that only allows a single instance of each role.  However, you can still view the status of that instance in the <strong>&quot;Compute Emulator UI&quot;</strong>.  In the <strong>&quot;Microsoft Azure Compute Emulator (Express)&quot;</strong> Window, expand all the nodes to find the single instance of the Web Role, and view it's trace output.  Close the Emulator UI window when you are done.</p>
+
+<p><img src="images/04170-computeemulatorui.png?raw=true" alt="04170-ComputeEmulatorUI" title="Compute Emulator UI">
+</p></li>
+<li><p>As before you can test the website in one or more browser instances.  Close the browser instances when you are done testing, and the compute emulator instances will be shutdown, and the debug session will end in Visual Studio:</p>
+
+<p><img src="images/04180-siteinbrowsers.png?raw=true" alt="04180-SiteInBrowsers" title="Site in Browsers">
+</p></li>
+<li><p>Now that we know it works as a Web Role, let's actually deploy it to the cloud.  You can either use a pre-created Cloud Service that you wish to deploy to, or Visual Studio's Azure Tools can help you create a Cloud Service on the fly.  We'll use that approach in this demo.  Right click on the Cloud Service project and select <strong>&quot;Publish...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04190-publishmenuitem.png?raw=true" alt="04190-PublishMenuItem" title="Publish Menu Item">
+</p></li>
+<li><p>In the <strong>&quot;Publish Azure Application&quot;</strong> window, if needed, click the <strong>&quot;Sign In&quot;</strong> button and enter the credentials for your Azure Subscription:</p>
+
+<p><img src="images/04196-signin.png?raw=true" alt="04196-SignIn" title="Sign In if Needed">
+</p></li>
+<li><p>In the <strong>&quot;Publish Azure Application&quot;</strong> window, select your desired subscription (if you have more than one) from the *&quot;&quot;Choose your subscription:&quot;** dropdown, and click <strong>&quot;Next&quot;</strong> to continue: </p>
+
+<p><img src="images/04200-publishsignin.png?raw=true" alt="04200-PublishSignIn" title="Microsoft Azure Publish Sign In">
+</p></li>
+<li><p>If you already have other Cloud Services in your subscription, create a new one by clicking on the <strong>Cloud Service&quot;</strong> drop down on the <strong>&quot;Microsoft Azure Publish Settings&quot;</strong> page, and selecting <strong>&quot;&lt;Create New...&gt;</strong>.  If you don't already have any cloud services, this option is implied:</p>
+
+<p><img src="images/042005-createnewcloudservice.png?raw=true" alt="042005-CreateNewCloudService" title="Create New Cloud Service">
+</p></li>
+<li><p>In the <strong>&quot;Create Cloud Service and Storage Account&quot;</strong> window, enter the requested values, and click <strong>&quot;Create&quot;</strong>:</p>
+
+<ul>
+<li><strong>Name:</strong> A valid hostname for your cloud service.  The fully qualified domain name will take the form of <strong>&lt;hostname&gt;.cloudapp.net</strong></li>
+<li><strong>Region or Affinity Group:</strong> Pick the data center where you want the Cloud Service to run.<br></li>
+<li><strong>Replication:</strong> Leave it at the default value</li>
+</ul>
+
+<p><img src="images/04210-createcloudservice.png?raw=true" alt="04210-CreateCloudService" title="Create Cloud Service">
+</p></li>
+<li><p>Review, but don't change the settings:</p>
+
+<ul>
+<li><strong>Environment</strong>: Defaults to <strong>Production</strong>.  The other choice is <strong>Staging</strong>.  Staging deployments allow you to verify that a deployment is production ready before making it live.  You can then <strong>&quot;Swap&quot;</strong> between the production and staging slots to make the staged slot go live.  If there is a problem you can always swap back to the original deployment.</li>
+<li><strong>Build configuration:</strong> This tells Visual Studio what build configuration (Release, Debug, etc) to use.</li>
+<li><strong>Service configuration:</strong> indicates which <strong>ServiceConfiguration.&lowast;.cscfg</strong> file to use.</li>
+</ul>
+
+<p><img src="images/04215-commonsettings.png?raw=true" alt="04215-CommonSettings" title="Common Settings">
+</p></li>
+<li><p>Next, turn on the Checkbox for <strong>&quot;Enable Remote Desktop for all roles&quot;</strong>.  Then in the <strong>&quot;Remote Desktop Configuration&quot;</strong> window, enter the username and password you want to use to connect to the roles using Remote Desktop then click <strong>&quot;OK&quot;</strong>:</p>
+<blockquote>
+<p><strong>Note:</strong> The Remote Desktop credentials are NEW credentials.  They don't have to match any existing account.  However, you do want to make sure to remember what you use here so that you can use them later. </p>
+
+<p><strong>Note:</strong> Remote Desktop access is an example of a benefit that Cloud Services have over Web Sites.  You do need to remember though that Role instances are stateless, and that any changes you make will affect only that instance, and only until it is reset.  Remote Desktop sessions should be used more for diagnostic reasons than for configuration.</p>
+</blockquote>
+<p><img src="images/04220-remotedesktopconfiguration.png?raw=true" alt="04220-RemoteDesktopConfiguration" title="Remote Desktop Configuration">
+</p></li>
+<li><p>Finally, click <strong>&quot;Publish&quot;</strong> to start the publication process:</p>
+
+<p><img src="images/04230-publish.png?raw=true" alt="04230-Publish" title="Publish">
+</p></li>
+<li><p>The actual publication process can take some time (ten minutes or more) to complete.  You can monitor the progress in Visual Studio's <strong>&quot;Microsoft Azure Activity Log&quot;</strong> window:</p>
+
+<p><img src="images/04240-microsoftazureactivitylog.png?raw=true" alt="04240-MicrosoftAzureActivityLog" title="Microsoft Azure Activity Log">
+</p></li>
+<li><p>While the Cloud Service is deploying, you can also review it's configuration in the portal.  At the time this is being written, the new Azure portal does NOT have support for managing Cloud Services.  You still need to do that in the old portal.  Login to your subscription on the old portal at <a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>, then click on <strong>&quot;Cloud Services&quot;</strong> to see the list of Cloud Services in your subscription. Finally, click on the name of your new cloud service to see it's details:</p>
+
+<p><img src="images/04250-cloudserviceinportal.png?raw=true" alt="04250-CloudServiceInPortal" title="Cloud Service in Portal">
+</p></li>
+<li><p>Try switching between the different pages of the Cloud Services' configuration in the portal.  For example, on the <strong>&quot;Instances&quot;</strong> page, you can see the status of all role instances in your Cloud Service.  You can close the portal when you are done:</p>
+
+<p><img src="images/04260-roleinstances.png?raw=true" alt="04260-RoleInstances" title="Role Instances">
+</p></li>
+<li><p>In Visual Studio's <strong>&quot;Microsoft Azure Activity Log&quot;</strong> window, wait until the status shows <strong>&quot;Completed&quot;</strong>.  You can then click on the URL for your cloud service to open it in the browser:</p>
+
+<p><img src="images/04270-completed.png?raw=true" alt="04270-Completed" title="Completed">
+</p></li>
+<li><p>Verify that the site loads correctly in the browser, then close the browser window when you are done:</p>
+
+<p><img src="images/04280-siteinbrowser.png?raw=true" alt="04280-SiteInBrowser" title="Site In Browser">
+</p></li>
+<li><p>Back in Visual Studio, from the menu bar, select <strong>&quot;View&quot;</strong> | <strong>&quot;Server Explorer&quot;</strong>, and then under the <strong>&quot;Azure&quot;</strong> node expand your Cloud Service all the way down to the individual instance of the web role.  Right click on the instance, and select <strong>&quot;Connect using Remote Desktop...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/04290-openremotedesktop.png?raw=true" alt="04290-OpenRemoteDesktop" title="Open Remote Desktop">
+</p></li>
+<li><p>Follow the prompts to connect, and enter the remote desktop credentials you specified earlier when enabling remote desktop:</p>
+
+<p><img src="images/04300-confirmpublisher.png?raw=true" alt="04300-ConfirmPublisher" title="Confirm Publisher">
+</p>
+
+<p><img src="images/04310-remotedesktopcredentials.png?raw=true" alt="04310-RemoteDesktopCredentials" title="Remote Desktop Credentials">
+</p>
+
+<p><img src="images/04320-confirmcertificate.png?raw=true" alt="04320-ConfirmCertificate" title="Confirm Certificate">
+</p></li>
+<li><p>Once you are connected you can do pretty much anything you like in the session.  For example, in the screenshot below, we've opened Internet Information Services Management to view the website in the role:</p>
+
+<p><img src="images/04330-iismanager.png?raw=true" alt="04330-IISManager" title="IIS Manager">
+</p></li>
+<li><p>When you are done, close the remote desktop session.</p></li>
+</ol>
+
+<hr>
+
+<p><a name="Task5"></a></p>
+
+<h2 id="Clean_Up">Clean Up</h2>
+
+<p>When you are done with this demo, you may have some resources in your subscription that are incurring charges.  If you don't want those charges to continue, you should delete the resources as soon as possible. </p>
+
+<ol>
+<li><p>To clean up the Cloud Service we created in Task 4:</p>
+
+<ul>
+<li>Open the old management portal (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>)</li>
+<li>Select <strong>Cloud Services</strong>, then clik on the row (not the name) for your Cloud Service</li>
+<li>Click the <strong>&quot;Delete&quot;</strong> button along the bottom:</li>
+<li>Choose the <strong>&quot;Delete the cloud service and its deployments&quot;</strong> option</li>
+<li>Click <strong>&quot;Yes&quot;</strong> to confirm the deletion</li>
+</ul>
+
+<p><img src="images/05010-deletecloudservice.png?raw=true" alt="05010-DeleteCloudService" title="Delete Cloud Service">
+</p>
+
+<p><img src="images/05020-confirmdeletion.png?raw=true" alt="05020-ConfirmDeletion" title="Confirm Deletion">
+</p></li>
+<li><p>Deleting a set of related resources is easier in the New Portal if you used <strong>&quot;Resource Groups&quot;</strong>.  Login to the new portal (<a href="https://portal.azure.com">https://portal.azure.com</a>).  Then, click <strong>&quot;Browse&quot;</strong> | <strong>&quot;Resource Groups&quot;</strong> </p>
+
+<p><img src="images/05030-browseresourcegroups.png?raw=true" alt="05030-BrowseResourceGroups" title="Browse Resource Groups">
+</p></li>
+<li><p>Then in the <strong>&quot;Resource groups&quot;</strong> blade, select the Resource Group you created at the beginning of this demo when you provisioned the Redis Cache.</p>
+
+<p><img src="images/05040-selectresourcegroup.png?raw=true" alt="05040-SelectResourceGroup" title="Select Resource Group">
+</p></li>
+<li><p>Click the <strong>&quot;Delete&quot;</strong> button at the top of the blade for your resource group:</p>
+
+<p><img src="images/05050-deleteresourcegroup.png?raw=true" alt="05050-DeleteResourceGroup" title="Delete Resource Group">
+</p></li>
+<li><p>Finally, on the <strong>&quot;Are you sure...&quot;</strong> blade, enter the name of the resource group in the box at the top to confirm the deletion.  Then review the list of resources that will be affected, and click the <strong>&quot;Delete&quot;</strong> button:</p>
+
+<p><img src="images/05060-confirmdeletion.png?raw=true" alt="05060-ConfirmDeletion" title="Confirm Deletion">
+</p></li>
+<li><p>You can monitor the status of the Resource Group deletion on the <strong>&quot;Notifications&quot;</strong> tab:</p>
+
+<p><img src="images/05070-monitordeletion.png?raw=true" alt="05070-MonitorDeletion" title="Monitor Deletion">
+</p>
+<blockquote>
+<p><strong>Note:</strong> Currently, deleting a resource or resource group does NOT remove any pinned tiles for the afftected resource from the Startboard.  You will need to manually unpin the tiles for the deleted resources. </p>
+</blockquote></li>
+</ol>
+
+<hr>
+
+<p><a name="Summary"></a></p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>In this demo we took a look at a number of Azure PaaS offerings including: </p>
+
+<ul>
+<li><a href="#Task1">Review the Fireworks Sample</a></li>
+<li><a href="#Task2">Create Azure Redis Cache</a></li>
+<li><a href="#Task3">Publish to Azure Web Site</a> </li>
+<li><a href="#Task4">Publish to Cloud Service</a></li>
+</ul>
+
+</div>
+</body>
+</html>
